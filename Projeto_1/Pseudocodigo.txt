@@ -1,0 +1,78 @@
+Pseudocodigo
+
+Classe coordenadas
+    Cria funcao coordenada
+        pede x'
+        pede y'
+
+
+
+Classe ponto(mixin coordenadas)
+    usa funcao coordenada
+    Criar funcao comparar_posicao
+        Pedir a equacao para comparar
+        Comparar se o valor e menor, igual ou maior que a equacao pedida
+        Retornar Pertence se o ponto esta na formula
+        Retornar dentro se o ponto e menor que a formula
+        Retornar fora se o ponto e maior que a formula
+    Criar funcao distancia_de_ponto
+        Criar variaveis x1, y1 e resultado
+        Pedir ao usuario o valor de coordenada_x' e de coordenada_y'
+        Calcula o resultado usando sqrt((x' - x1)^2 + (y' - y1)^2)
+        Coloca o resultado em resultado
+        Retorna ao usuario o resultados
+    Criar funcao quadrante
+        Criar variavel resultado
+        Calcular resultado sendo x'*y'
+        Retorna 1 se resultado > 0 e x' > 0
+        Retorna 2 se resultado < 0 e x' < 0
+        Retorna 3 se resultado > 0 e x' < 0
+        Retorna 4 se resultado < 0 e x' > 0
+Classe linha(mixin coordenadas)
+    Criar variaveis ponto_1 = ponto, ponto_2 = ponto e amplitude
+    Pedir ao usuario o valor de cada variavel, exceto amplitude  
+    Fazer amplitude ser igual a (ponto_1.x' - ponto_2.x') / (ponto_1.y' - ponto_2.y')
+    Fazer e retorna a equacao da linha igual a (y - ponto_1.y') = amplitude(x - ponto_1.x')
+    Criar funcao tangencia
+        Pede ao usuario a formula
+        Caso tenha apenas 1 igualdade real, retorna ao usuario que e tangente
+        Caso tenha mais de 1 resultado real, retorna ao usuario que e secante
+        Caso nao possua igualdade, retorna que nao encosta
+Classe circulo(herdando do ponto)
+    Criar variavel raio
+    Pedir ao usuario o valor de cada um deles
+    Determinar e retornar a equacao usando (y - y')^2 + (x - x')^2 = raio^2
+    Criar funcao area
+        Cria variavel resultado
+        Calcula resultado = pi*(raio)^2
+        retorna resultado
+Classe triangulo
+    Criar variaveis ponto_1 = ponto, ponto_2 = ponto e ponto_3 = ponto
+    Pedir ao usuario o valor de cada variavel
+    Criar funcao area
+        Cria a variavel resultado
+        Calcula o valor de resultado sendo resultado = (ponto_1.x'*ponto_2.y' + ponto_1.y'*ponto_3.x' + ponto_2.x'*ponto_3.y' - ponto_3.x'*ponto_2.y - ponto_1.x'*ponto_3.y' - ponto_2.x'*ponto_1.y')/2
+        Retorna resultado ao usuario 
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
